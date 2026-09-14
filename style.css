@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #07070b;
+    color: #f5f3fa;
+    font-family: "Inter", Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font-family: inherit;
+}
+
+.container {
+    width: min(1180px, calc(100% - 48px));
+    margin: 0 auto;
+}
+
+
+/* =========================
+   BACKGROUND
+========================= */
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: -2;
+
+    background:
+        radial-gradient(
+            circle at 15% 10%,
+            rgba(123, 45, 255, .20),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 85% 60%,
+            rgba(35, 80, 200, .13),
+            transparent 35%
+        );
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+
+    background-image:
+        linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+
+    background-size: 55px 55px;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    height: 82px;
+
+    background: rgba(7,7,11,.88);
+    border-bottom: 1px solid rgba(255,255,255,.07);
+
+    backdrop-filter: blur(18px);
+}
+
+.nav {
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 27px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.logo span {
+    color: #8b4dff;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.menu a {
+    color: #a7a3b0;
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: .25s ease;
+}
+
+.menu a:hover {
+    color: #fff;
+}
+
+.menu-button {
+    display: none;
+
+    width: 44px;
+    height: 44px;
+
+    border: 1px solid rgba(255,255,255,.1);
+    border-radius: 10px;
+
+    background: #111117;
+
+    cursor: pointer;
+}
+
+.menu-button span {
+    display: block;
+
+    width: 21px;
+    height: 2px;
+
+    margin: 5px auto;
+
+    background: white;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: calc(100vh - 82px);
+
+    display: flex;
+    align-items: center;
+
+    padding: 90px 0 100px;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+
+    padding: 9px 15px;
+
+    border: 1px solid rgba(145,75,255,.4);
+    border-radius: 50px;
+
+    background: rgba(125,54,255,.08);
+
+    color: #b78cff;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    margin-bottom: 25px;
+}
+
+.tag span {
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+    background: #9b5cff;
+
+    box-shadow: 0 0 15px #9b5cff;
+}
+
+.hero h1 {
+    max-width: 650px;
+
+    font 
